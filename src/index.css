@@ -1,1 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --color-orange:#FF624C;
+    --color-white:#FFFFFF;
+    --color-black:#000;
+    --color-yellow: #FED550;
+    --color-purple: #1A2378;
+    --color-blue: #00579F;
+    --color-red: #BD0034;
+    --color-black01: #303030;
+    --color-white01: #D9D9D9;
+    --color-purple01: #283B82;
+    --color-blue01: #469BDB;
+    --color-white02: #F4F4F4;
+    --color-black100: #30303038;
+}
+.custom-select .ant-select-selector{
+    border: none !important;
+    box-shadow: none !important;
+}

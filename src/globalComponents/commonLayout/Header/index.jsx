@@ -5,7 +5,6 @@ const Header = () => {
   return (
     <div>
         <HeaderComponents />
-      <h1>Header</h1>
     </div>
   )
 }

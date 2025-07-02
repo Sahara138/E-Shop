@@ -2,6 +2,9 @@ import React from 'react'
 import Container from '../../globalComponents/Container';
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
+import Banner from './components/Banner';
+import SupportSection from './components/support';
+import FeaturedProducts from './components/featuredProducts';
 
 const Home = () => {
   const {t} = useTranslation()
@@ -11,7 +14,9 @@ const Home = () => {
         <title>Home</title>
       </Helmet>
       <Container >
-        <h1>{t('this_is_home_page')}</h1>
+        <Banner />
+        <SupportSection />
+        <FeaturedProducts />
       </Container>
     </div>
   )

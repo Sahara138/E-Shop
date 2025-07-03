@@ -3,7 +3,7 @@ import { SupportData } from './supportData'
 
 const SupportSection = () => {
   return (
-    <div className='flex items-center justify-between gap-x-[80px] mt-20'>
+    <section className='flex items-center justify-between gap-x-[80px] mt-20'>
         {
             SupportData?.map((item, index) =>{ 
                 const Icon = item?.icon;
@@ -23,7 +23,7 @@ const SupportSection = () => {
         
 
       </div>
-    </div>
+    </section>
   )
 }
 

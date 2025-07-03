@@ -17,24 +17,42 @@ export const categoriesItems =
     key: '0',
   },
   {
+    type: 'divider',
+  },
+  {
     label: <Link to="/product" className="flex items-center gap-x-2  font-monserrat font-normal text-base text-leading-[24px] text-black01 pb-1"><FaMobileScreenButton color="#FF624C" /> Mobile & Accessories</Link>,
     key: '1',
+  },
+  {
+    type: 'divider',
   },
   {
     label: <Link to="/product" className="flex items-center gap-x-2 font-monserrat font-normal text-base text-leading-[24px] text-black01 pb-1"><FaTv color="#FF624C" /> TV & Home Theater</Link>,
     key: '2',
   },
   {
+    type: 'divider',
+  },
+  {
     label: <Link to="/product" className="flex items-center gap-x-2 font-monserrat font-normal text-base text-leading-[24px] text-black01 pb-1"><FaHeadphones color="#FF624C" /> Audio & Headphones</Link>,
     key: '3',
+  },
+  {
+    type: 'divider',
   },
   {
     label: <Link to="/product" className="flex items-center gap-x-2  font-monserrat font-normal text-base text-leading-[24px] text-black01 pb-1"><IoCameraOutline color="#FF624C" /> Cameras & Camcorders</Link>,
     key: '4',
   },
   {
+    type: 'divider',
+  },
+  {
     label: <Link to="/product" className="flex items-center gap-x-2  font-monserrat font-normal text-base text-leading-[24px] text-black01 pb-1"><IoLogoPlaystation color="#FF624C" />Gaming Equipment</Link>,
     key: '5',
+  },
+  {
+    type: 'divider',
   },
   {
     label: <Link to="/product" className="flex items-center gap-x-2 font-monserrat font-normal text-base text-leading-[24px] text-black01 pb-1"><FaHome color="#FF624C" /> Home Appliances</Link>,

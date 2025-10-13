@@ -1,0 +1,105 @@
+import { Tooltip } from 'antd';
+import React from 'react'
+import { Link } from 'react-router-dom';
+import { getStars } from '../../utils/GenerateRatings';
+import { GetDiscountPrice } from '../../utils/GetDiscountPrice';
+import { FaOpencart } from 'react-icons/fa6';
+import { FiHeart } from 'react-icons/fi';
+import { IoShareSocialOutline } from 'react-icons/io5';
+
+const ProductCardList = ({
+    id,
+  image,
+  pCategory,
+  pName,
+  ratings,
+  totalRatings,
+  price,
+discount,
+}) => {
+    console.log(discount);
+    // console.log(GetDiscountPrice(price, discount));
+  return (
+    <div className="relative group border border-transparent hover:border-black100 p-6 grid grid-cols-[1fr_2fr_1fr] rounded-[10px]">
+      <div className="w-[214px] h-[214px] rounded-[10px] border border-black100 overflow-hidden ">
+        <img
+          src={image}
+          alt="Product Image"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div>
+        <h6 className="font-montserrat font-normal text-sm leading-[20px] uppercase tracking-[5px] text-black01 mt-4">
+          {pCategory}
+        </h6>
+        {
+            pName?.length > 14 ? (
+              <Tooltip
+                placement="top"
+                color="white"
+                title={
+                  <h4 className="font-montserrat font-semibold text-xl leading-[30px] text-black01 ">
+                    {pName}
+                  </h4>
+                }
+              >
+                <Link to={`/product/${id}`} className="truncate block min-w-0 font-montserrat font-semibold text-xl leading-[30px] group-hover:text-orange group-hover:underline group-hover:transition-all group-hover:duration-300">
+                  {pName}
+                </Link>
+              </Tooltip>
+            ) : (
+              <Link to={`/product/${id}`} className="font-montserrat font-semibold text-xl leading-[30px] group-hover:text-orange group-hover:underline">
+                {pName}
+              </Link>
+            )
+        }
+        {getStars(ratings) && (
+          <div className="flex items-center gap-x-2 mt-1">
+            <div className="flex items-center gap-x-1">
+                {getStars(ratings)}
+            </div>
+            <span className="font-montserrat font-normal text-base leading-[24px] text-black01">
+              ({totalRatings})
+            </span>
+          </div>
+        )}
+        <div className="mt-4">
+            <div className="flex items-center gap-x-3">
+                <div className='w-[50px] h-[50px] bg-white rounded-full flex justify-center items-center text-black01 border border-black01 cursor-pointer hover:bg-orange hover:text-white hover:border-orange transition-all duration-300'>
+                    <FaOpencart size={20}/>
+                </div>
+                <div className='w-[50px] h-[50px] bg-white rounded-full flex justify-center items-center text-black01 border border-black01 cursor-pointer hover:bg-orange hover:text-white hover:border-orange transition-all duration-300'>
+                    <FiHeart size={20}/>
+                </div><div className='w-[50px] h-[50px] bg-white rounded-full flex justify-center items-center text-black01 border border-black01 cursor-pointer hover:bg-orange hover:text-white hover:border-orange transition-all duration-300'>
+                    <IoShareSocialOutline size={20}/>
+                </div>
+
+            </div>
+        </div>
+        {
+            
+            <div className="flex items-end gap-x-2 mt-6">
+
+                <span className="font-montserrat font-semibold text-2xl leading-[30px] text-black01 group-hover:text-orange group-hover:transition-all group-hover:duration-300 ">${GetDiscountPrice(price, discount)}</span>
+                {
+                    discount > 0 && (
+                        <span className="font-montserrat font-normal text-md leading-[24px] text-black01 line-through">${price}</span>
+                    )
+                }
+            </div>
+        }
+      </div>
+      <div>
+        {discount>0 && (
+            <div className="absolute top-3 right-3 bg-orange w-fit py-[7px] px-5 rounded-[5px]">
+                <span className="font-montserrat font-bold text-base leading-[24px] text-white">
+                    {discount}%
+                </span>
+            </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default ProductCardList

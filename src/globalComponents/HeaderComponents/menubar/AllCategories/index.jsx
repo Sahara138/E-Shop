@@ -6,6 +6,7 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const AllCategoryMenu = ({isMenu,icons, className}) => {
   const {t} = useTranslation();
+
   
   return (
     <>
@@ -18,11 +19,12 @@ const AllCategoryMenu = ({isMenu,icons, className}) => {
             </div>
           }
           <div>
+            {/* <p className={className}>{t(title)}</p> */}
             <p className={className}>{t('All_Categories')}</p>
           </div>
           {
             icons &&
-            <MdKeyboardArrowDown size={25} className='text-black01 cursor-pointer ml-[100px]'/>
+            <MdKeyboardArrowDown size={25} className='text-black01 cursor-pointer lg:ml-[100px]'/>
           }
         </Space>
     </Dropdown>

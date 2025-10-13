@@ -4,11 +4,15 @@ import './index.css'
 import App from './App.jsx'
 import 'swiper/css';
 import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { Provider } from 'react-redux';
+import { store } from './service/redux/store.js';
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
     <HelmetProvider>
-      <App />
+      <Provider store={store}> 
+        <App />
+      </Provider>
     </HelmetProvider>
   // </StrictMode>,
 )

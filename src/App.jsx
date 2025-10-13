@@ -7,6 +7,7 @@ import Blog from './pages/blog'
 import Contact from './pages/contact'
 import Checkout from './pages/checkout'
 import RootLayout from './layouts/RootLayout'
+import SingleProducts from './pages/product/components/singleProducts'
 
 function App() {
   const router = createBrowserRouter(
@@ -15,6 +16,7 @@ function App() {
         <Route element={<RootLayout />} >
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/product/:id" element={<SingleProducts />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/blog" element={<Blog />} />

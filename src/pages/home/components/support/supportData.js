@@ -21,4 +21,19 @@ export const SupportData = [
         title: "Transparent",
         subtitle: "Hassle-free return policy",
     },
+    {
+        icon: DeliveryIcon,
+        title: "Free Shipping",
+        subtitle: "Worldwide available",
+    },
+    {
+        icon: SecureIcon,
+        title: "100% Guaranteed",
+        subtitle: "Receive product first",
+    },
+    {
+        icon: TransparentIcon,
+        title: "Return Available",
+        subtitle: "See return policy",
+    },
 ]

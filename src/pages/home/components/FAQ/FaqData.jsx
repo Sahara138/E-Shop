@@ -1,0 +1,39 @@
+import { Children } from "react";
+
+export const FaqData = [
+    {
+        key: 1,
+        label: "What payment methods do you accept?",
+        children: (
+            <p>
+                We accept a wide range of payment methods, including credit cards, debit cards, and PayPal.
+            </p>
+        ),
+    },
+    {
+        key: 2,
+        label: "How long does the product shipping take?",
+        children: (
+            <p>
+                We typically ship within 1-2 business days
+            </p>
+        ),
+    },
+    {
+        key: 3,
+        label: "Do you offer international shipping?",
+        children: (
+            <p>
+                Yes, we offer international shipping to select countries.
+            </p>
+        ),
+    },
+    {
+        key: 4,
+        label: "Can I track my order?",
+        children: (
+            <p>
+                Absolutely! Once your order has been shipped, we'll send you a tracking number and a link to our carrier's website where you can track your package in real-time.
+            </p>),
+    },
+]

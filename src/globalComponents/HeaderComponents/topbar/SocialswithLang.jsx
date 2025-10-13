@@ -57,7 +57,7 @@ const SocialswithLang = () => {
     }
   };
   return (
-    <div className="flex items-center justify-end gap-x-12">
+    <div className="flex items-center lg:justify-end gap-x-6 lg:gap-x-12">
         <div>
             <Select
                 defaultValue={currencyoptions[0].value}
@@ -77,9 +77,9 @@ const SocialswithLang = () => {
             className="custom-select"
         />
         </div>
-      <div className="w-[1px] h-8 bg-black100"></div>
+      <div className="w-[1px] h-8 bg-black100 hidden lg:block"></div>
 
-      <div className="flex items-center gap-x-6">
+      <div className="lg:flex items-center gap-x-6 hidden">
         <Link to="https://www.facebook.com/" target="_blank">
           <FaFacebookF color="#303030"/>
         </Link>
